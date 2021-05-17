@@ -2,6 +2,7 @@ import os
 import discord
 import requests
 import json
+from keep_alive import keep_alive
 
 client = discord.Client()
 
@@ -25,5 +26,9 @@ async def on_message(message):
     quote = get_quote()
     await message.channel.send("Now that the round is completed, Here is a quote for you!!")
     await message.channel.send(quote)
+    await message.channel.send('Work harder, come back for another challenge, we believe in you!')  
+  if 'match has been invalidated' in message.content:
+    await message.channel.send('Come on, Don\'t give up!\nPractice harder!')
     
+keep_alive()
 client.run(os.getenv('TOKEN'))
