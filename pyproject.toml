@@ -8,6 +8,7 @@ authors = ["SreelayaVuyyuru <<>>"]
 python = "^3.8"
 discord = "^1.0.1"
 flask = "^2.0.0"
+embed-python = "^0.1.12"
 
 [tool.poetry.dev-dependencies]
 
